@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Indie+Flower&family=Poppins:wght@200&family=Sniglet&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Sniglet', cursive;
+}
+.container {
+    height: 100vh;
+    display:flex;
+    justify-content: top;
+    align-items: left;
+    padding-left: 5%;
+    flex-direction: column;
+    background-color:#fff;
+    background-image: url('../public/houses.svg');
+    background-size: 100vh;
+    background-repeat: no-repeat;
+    background-position: center right;
+}
+
+.container_left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50vh;
+}
+
+.title {
+    font-size: 65px;
+    color: #BA68C8;
+    animation: flipTitle 2s;
+    text-align: left;
+}
+
+@keyframes flipTitle {    /*Utilizando keyframes para animação, flipTitle é um nome qualquer*/
+    from{
+        transform: rotateX(90deg);
+    }
+    to{
+        transform: rotateX(0deg);
+    }
+}
+
+.containerInput {
+    background-color: #37474F;
+    width: 300px;
+    padding: 15px;
+    margin: 35px 0;
+    display: flex;
+    border-radius: 8px;
+    box-shadow: 1px 3px 8px rgba(0,0,0, 0.5);
+}
+
+.containerInput input {
+    background-color: transparent;
+    border: 0;
+    font-size: 20px;
+    color: #fff;
+    outline: none;
+    margin-right: 8px; /*margem entre o botao e o texto interno*/
+}
+
+.containerINput input::placeholder {
+    color: #fff;
+}
+
+.buttonSearch {
+    background-color: transparent;
+    border:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+.buttonSearch:hover {
+    transform: scale(1.2); /* aumenta o tamanho da lupa*/
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #EAC1F5;
+    width: 500px;
+    border-radius: 8px;
+}
+
+.main h2 {
+    margin: 16px 0;
+    font-size: 39px;
+}
+
+.main span {
+    margin-bottom: 16px;
+    font-size: 20px;
+}
+
+@media (max-width: 1000px) {
+    .container {
+        background-size: 70vh;
+        background-position: center bottom;
+    }
+}
+
+@media (max-width: 620px) { /* jquery para modificar o estilo e deixar responsivo 
+    qnd a tela max for 620px */
+    .title{
+        font-size: 60px;
+    }
+
+    .main h2{
+        font-size: 28px;
+    }
+
+    .main{
+        width: 80%;
+        min-height: 250px;
+    }
+    .container {
+        align-items: center;
+        flex-direction: column;
+        background-size: 50vh;
+        background-position: center bottom;
+    }
+}
